@@ -3,5 +3,5 @@ export interface ITask {
     priority: number;
     status: number;
     subtasks: string[];
-    timestamp: number;
+    timeStamp: number;
 }

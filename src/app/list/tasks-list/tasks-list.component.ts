@@ -14,7 +14,7 @@ export class TasksListComponent implements OnInit {
         priority: 0,
         status: 0,
         subtasks: [],
-        timestamp: 0
+        timeStamp: 0
     }];
 
     constructor(private tasksListService: TasksListService) { }
