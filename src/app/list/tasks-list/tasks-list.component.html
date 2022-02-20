@@ -1,25 +1,33 @@
-<div class="container bold-text">
-    <div class="row task-item">
-        <div class="col-md-6 col-sm-6 col-lg-6">
-            Description
-        </div>
-        <div class="col-md-1 col-sm-1 col-lg-1">
-            Status
-        </div>
-        <div class="col-md-1 col-sm-1 col-lg-1">
-            Priority
-        </div>
-        <div class="col-md-2 col-sm-2 col-lg-2">
-            TimeStamp
-        </div>
-        <div class="col-md-1 col-sm-1 col-lg-1">
-            Edit
-        </div>
-        <div class="col-md-1 col-sm-1 col-lg-1">
-            Delete
-        </div>
-    </div>
-</div>
-<div *ngFor="let task of tasksList">
-    <app-list-item [item]='task'></app-list-item>
-</div>
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Timestamp</th>
+        <th scope="col" colspan="2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasksList">
+            <td style="width: 50%">
+                {{task.description}}
+            </td>
+            <td style="width: 10%">
+                {{task.status}}
+            </td>
+            <td style="width: 10%">
+                {{task.priority}}
+            </td>
+            <td style="width: 10%">
+                {{task.timeStamp | date: 'dd/mm/yyyy hh:mm'}}
+            </td>
+            <td style="width: 10%">
+                <i class="bi bi-pencil-fill"></i>Edit<i class="bi-alarm"></i>
+            </td>
+            <td style="width: 10%">
+                <i class="bi bi-pencil-fill"></i>Delete
+            </td>
+        </tr>
+    </tbody>
+  </table>
