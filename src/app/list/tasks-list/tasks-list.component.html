@@ -1,3 +1,25 @@
+<div class="container bold-text">
+    <div class="row task-item">
+        <div class="col-md-6 col-sm-6 col-lg-6">
+            Description
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1">
+            Status
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1">
+            Priority
+        </div>
+        <div class="col-md-2 col-sm-2 col-lg-2">
+            TimeStamp
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1">
+            Edit
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1">
+            Delete
+        </div>
+    </div>
+</div>
 <div *ngFor="let task of tasksList">
     <app-list-item [item]='task'></app-list-item>
 </div>
