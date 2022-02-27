@@ -1,14 +1,16 @@
-<table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Description</th>
-        <th scope="col">Status</th>
-        <th scope="col">Priority</th>
-        <th scope="col">Timestamp</th>
-        <th scope="col" colspan="2">Actions</th>
-      </tr>
-    </thead>
+<button type="button" class="btn btn-primary">
+    <i class="bi bi-plus-circle"></i>
+    Add New Task
+</button>
+<table class="table table-bordered table-striped mt-3">
     <tbody>
+        <tr>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Timestamp</th>
+            <th colspan="2">Actions</th>
+        </tr>
         <tr *ngFor="let task of tasksList">
             <td style="width: 50%">
                 {{task.description}}
@@ -22,12 +24,12 @@
             <td style="width: 10%">
                 {{task.timeStamp | date: 'dd/mm/yyyy hh:mm'}}
             </td>
-            <td style="width: 10%">
-                <i class="bi bi-pencil-fill"></i>Edit<i class="bi-alarm"></i>
+            <td class="center-icon">
+                <i class="bi bi-pencil-fill"></i>
             </td>
-            <td style="width: 10%">
-                <i class="bi bi-pencil-fill"></i>Delete
+            <td class="center-icon">
+                <i class="bi bi-trash"></i>
             </td>
         </tr>
     </tbody>
-  </table>
+</table>
